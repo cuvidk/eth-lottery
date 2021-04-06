@@ -23,7 +23,7 @@ contract Lottery {
   }
 
   modifier ownerOnly() {
-    require(msg.sender == owner, "Only owner of contract can execute this operation");
+    require(msg.sender == owner, "Only the owner of the contract can execute this operation");
     _;
   }
 
