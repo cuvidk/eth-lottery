@@ -10,7 +10,7 @@ const LotteryInfoList = ({
   contractOwner,
 }) => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <LotteryInfoListItem
         name="Registered players"
         value={registeredPlayers}

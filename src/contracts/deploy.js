@@ -24,7 +24,7 @@ const web3 = new Web3(provider);
     .on("sending", () => {
       console.log("Deploying contract");
       console.log("-----------------");
-      console.log(lottery.abi);
+      console.log(JSON.stringify(lottery.abi));
     })
     .on("error", (err) => {
       console.log(err);

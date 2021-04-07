@@ -3,7 +3,7 @@ const path = require("path");
 const solc = require("solc");
 
 const CONTRACT_NAME = "lottery.sol";
-const srcPath = path.resolve(__dirname, "contracts", CONTRACT_NAME);
+const srcPath = path.resolve(__dirname, CONTRACT_NAME);
 const srcContent = fs.readFileSync(srcPath, { encoding: "utf8" });
 
 const input = {

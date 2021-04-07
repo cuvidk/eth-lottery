@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "mocha",
-    "compile-contract": "node src/compile.js",
-    "deploy-contract": "node src/deploy.js"
+    "compile-contract": "node src/contracts/compile.js",
+    "deploy-contract": "node src/contracts/deploy.js"
   },
   "eslintConfig": {
     "extends": [
