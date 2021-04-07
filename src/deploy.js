@@ -21,13 +21,15 @@ const web3 = new Web3(provider);
       from: sender,
       gas: "1000000",
     })
-    .on("sending", (payload) => {
+    .on("sending", () => {
       console.log("Deploying contract");
       console.log("-----------------");
       console.log(lottery.abi);
     })
     .on("error", (err) => {
       console.log(err);
+      provider.engine.stop();
+      return;
     });
   console.log("Contract deployed");
   console.log("-----------------");
