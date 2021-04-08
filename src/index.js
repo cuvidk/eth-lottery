@@ -18,7 +18,7 @@ class App extends React.Component {
     const players = await lottery.methods.getPlayers().call();
 
     this.setState({
-      joined: players.some((player) => player == accounts[0]),
+      joined: players.some((player) => player === accounts[0]),
       isOwner: owner === accounts[0],
       account: accounts[0],
     });

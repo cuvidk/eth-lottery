@@ -10,6 +10,6 @@ An ether lottery dapp. Contains files used to create, compile and deploy the lot
 - [ ] update lottery info after picking a winner
 - [ ] update lottery info periodically
 - [x] tune the deploy script to write the abi and the contract address in a .env file
-- [ ] create the lottery contract instance using the abi and address provided in the .env
+- [x] create the lottery contract instance using the abi and address provided in the .env
 - [ ] deploy a new contract that remembers the last prize pool
 - [ ] design a better ui for mobile users
