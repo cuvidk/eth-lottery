@@ -20,7 +20,7 @@ class LotteryInfoList extends React.Component {
 
   async fetchLotteryInfo() {
     const lastWinner = await lottery.methods.winner().call();
-    const lastPrizePool = "0";
+    const lastPrizePool = await lottery.methods.lastPrize().call();
     const registeredPlayers = (await lottery.methods.getPlayers().call())
       .length;
     const prizePool = await web3.eth.getBalance(lottery.options.address);

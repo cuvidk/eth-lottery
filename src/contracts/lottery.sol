@@ -5,6 +5,7 @@ contract Lottery {
   address public owner;
   address payable [] public players;
   address payable public winner;
+  uint public lastPrize;
 
   constructor() {
     owner = msg.sender;
@@ -29,6 +30,7 @@ contract Lottery {
 
   function pickWinner() public ownerOnly {
     winner = players[random() % players.length];
+    lastPrize = address(this).balance;
     winner.transfer(address(this).balance);
     players = new address payable [](0);
   }
